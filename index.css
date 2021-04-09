@@ -1,14 +1,10 @@
 body{
-    background-color: #e4e1fa;
+    background-color: #dedafc;
     font-family: 'Poppins', sans-serif;
     margin-top: 10px;
 }
 .middle
 {
-    /* align-items: flex-end;
-    align-content: center;
-    align-items: center; */
-    /* margin: 20px; */
     text-align: center;
     font-size: x-large;
 }
@@ -20,14 +16,16 @@ body{
     text-decoration: none;
     color: black;
     border-radius: 50px;
-    background: #e4e1fa;
-    box-shadow:  20px 20px 60px #c2bfd5,
-             -20px -20px 60px #ffffff;
+    background: linear-gradient(145deg, #cbe1cc, #f1fff3);
+    box-shadow:  7px 7px 14px #bbd0bc,
+             -7px -7px 14px #ffffff;
 }
 .padding:hover
 {
-    box-shadow: inset 20px 20px 60px #c2bfd5,
-            inset -20px -20px 60px #ffffff;
+    border-radius: 50px;
+    background: #e1fae3;
+    box-shadow: inset 7px 7px 14px #bbd0bc,
+            inset -7px -7px 14px #ffffff;
 }
     .section
     {
@@ -45,7 +43,15 @@ body{
     }
     .sections:hover
     {
-        font-size: 33px;
+        /* border-radius: 50px;
+        background: linear-gradient(145deg, #eee9ff, #c8c4e3);
+        box-shadow:  13px 13px 26px #b8b5d1,
+             -13px -13px 26px #ffffff; */
+        /* background-color: #dedafc; */
+        border-radius: 50px;
+        background: linear-gradient(145deg, #fff4d2, #e6cdb0);
+        box-shadow:  9px 9px 18px #d4bda3,
+             -9px -9px 18px #ffffe5;
         background: #ffe4c4;
     }
     .sections
@@ -59,24 +65,33 @@ body{
         list-style: none;
         padding: 20px;
         border: 3px, solid;
-        border-radius: 50px;
-        background: #ffe4c4;
-        box-shadow:  20px 20px 60px #d9c2a7,
-                -20px -20px 60px #ffffe1;
+        background-color: #dedafc;
+        /* border-radius: 50px;
+        background: #dedafc;
+        box-shadow: inset 13px 13px 26px #b8b5d1,
+                    inset -13px -13px 26px #ffffff; */
+
+                    border-radius: 50px;
+                    background: #ffe4c4;
+                    box-shadow: inset 9px 9px 18px #d4bda3,
+                                inset -9px -9px 18px #ffffe5;
     }
+.sec:nth-child(even)
+{
+    background-color: #f9eee1;
+}
 .sec
 {
     text-align: center;
     background-color: #e1fae3;
-    /* padding: 5px; */
 }
 #Education
 {
-    /* display: flex; */
+
 }
 .foot{
     text-align: center;
-    margin: 20px;
+    margin: 40px;
 }
 .footer
 {
@@ -85,16 +100,18 @@ body{
     padding: 10px;
     margin: 5px;
     text-decoration: none;
-    border-radius: 10px;
-    background: #e4e1fa;
-    box-shadow:  20px 20px 60px #c2bfd5,
-             -20px -20px 60px #ffffff;
+    border-radius: 50px;
+    background: #e1fae3;
+    box-shadow: inset 7px 7px 14px #bbd0bc,
+            inset -7px -7px 14px #ffffff;
     font-size: x-large;
 }
 .footer:hover
 {
-    box-shadow: inset 20px 20px 60px #c2bfd5,
-    inset -20px -20px 60px #ffffff;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #cbe1cc, #f1fff3);
+    box-shadow:  7px 7px 14px #bbd0bc,
+             -7px -7px 14px #ffffff;
 }
 @media (min-width:300px) and (max-width:768px)
 {
@@ -112,3 +129,4 @@ body{
         min-height: 300px;
     }
 }
+
