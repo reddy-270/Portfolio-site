@@ -76,6 +76,18 @@ body{
     box-shadow: inset 7px 7px 14px #bbd0bc,
             inset -7px -7px 14px #ffffff;
 }
+
+.border
+{
+    content: ' ';
+    width: 100%;
+    height: 4px;
+    background-color: #b1f8b7;
+    /* position: absolute; */
+    bottom: 0%;
+    text-decoration: none;
+}
+
     .section
     {
         align-items: center;
@@ -84,7 +96,7 @@ body{
         flex-wrap: wrap;
         margin-top: 30px;
         padding-top: 70px;
-        padding-left: 150px;
+        padding-left: 110px;
         padding-right: 30px;
         padding-bottom: 70px;
         margin-bottom: 100px;
@@ -125,27 +137,42 @@ body{
     background-color: #e1fae3;
 }
 
-@media screen and (min-width : 1090px) {
-    .head
-    {
-        padding: 5px;
-        text-align: center;
-        border: 3px solid #afabce;
-        border-radius: 15px;
-        margin: 0 43%;
-    }
-}
-@media screen  and (max-width: 1080px){
-    .head
-    {
-        padding: 5px;
-        text-align: center;
-        border: 3px solid #afabce;
-        border-radius: 15px;
-        margin: 0 30%;
-    }
+.head
+{
+  padding: 10px;
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
+.head::after
+{
+    content: ' ';
+    width: 50px;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #d4bda3;
+    position: absolute;
+
+    background: -webkit-linear-gradient(to right, #2a3781, #faf6e1);
+    background: linear-gradient(to right, #35337e, #f5825f);
+    bottom: 0%;
+    left: 48%;
+    transition: all 500ms ease;
+}
+
+.head:hover::after
+{
+    width: 10%;
+    left :45%;
+    right: 55%;
+}
+#Education
+{
+  background-color: #dedafc;
+}
 
 .container {
     
@@ -398,6 +425,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 70px;
 }
 
 .course-card
@@ -410,10 +438,10 @@ body{
     border: 3px solid #dedafc;
     border-radius: 10px;
     flex-wrap: wrap;
-    border-radius: 15px;
+    border-radius: 21px;
     background: #dedafc;
-    box-shadow:  8px 8px 16px #bdb9d6,
-                 -8px -8px 16px #fffbff;
+    box-shadow:  5px 5px 10px #bdb9d6,
+                -5px -5px 10px #fffbff;
 }
 
 /* .course-card
@@ -447,6 +475,147 @@ box-shadow:  7px 7px 14px #d9d9d9,
 }
 
 
+@media (min-width: 1000px) {
+  
+    .skill-container
+    {
+        margin:2% 5%;
+        /* margin: ; */
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .Jumbo
+    {
+        border: 1px solid #e1fae3;
+        width: 65%;
+        height: 500px;
+        margin: 50px;
+        border-radius: 30px;
+        padding-left: 100px;
+      background: #e1fae3;
+      box-shadow: inset 5px 5px 10px #bfd5c1,
+                  inset -5px -5px 10px #ffffff;
+    }
+    .progress-flex
+    {
+        display: flex;
+    }
+
+
+    .progress .score:hover
+    {
+        animation: animate2 4s ease-in-out forwards;
+    }
+    @keyframes animate2 {
+      from
+      {
+        width: 0;
+      }
+    }
+    .progress
+    {
+        text-align:left ;
+        margin-top: 32px;
+        margin-left: 150px;
+        width: calc(80% - 280px);
+        height: 15px;
+        background: white;
+        border-radius: 20px;
+    }
+    .score
+    {
+        width: 70%;
+        background-color: #e1fae3;
+        height: 15px;
+        border-radius: 10px;
+        /* border-radius: 50px; */
+        background: #e1fae3;
+        box-shadow:  5px 5px 10px #bfd5c1,
+                    -5px -5px 10px #ffffff;
+        animation: animate 3s ease-in-out forwards;
+    }
+    @keyframes animate {
+        from
+        {
+          width: 0;
+        }
+    }
+    .progress-name
+    {
+        position: relative;
+        width: 110px;
+        text-align: right;
+    }
+}
+
+@media  (max-width: 990px) {
+
+
+  .skill-container
+  {
+      margin:1% 2%;
+      /* margin: ; */
+      /* align-items: center; */
+      /* justify-content: center; */
+      display: flex;
+  }
+  .Jumbo
+  {
+      /* border: 1px solid #e1fae3; */
+      width: 100%;
+      height: 500px;
+      margin: 50px;
+      padding-left: 10px;
+      /* border-radius: 30px;
+    background: #e1fae3;
+    box-shadow: inset 5px 5px 10px #bfd5c1,
+                inset -5px -5px 10px #ffffff; */
+  }
+  .progress-flex
+  {
+      display: flex;
+      flex-direction: row;
+  }
+
+
+  .progress-name
+  {
+      position: relative;
+      width: 70px;
+      text-align: right;
+  }
+  .progress
+  {
+      margin-top: 32px;
+      margin-left: 150px;
+      width: calc(100% - 150px);
+      height: 15px;
+      background: white;
+      border-radius: 20px;
+  }
+
+  .score
+  {
+      width: 70%;
+      background-color: #e1fae3;
+      height: 15px;
+      border-radius: 10px;
+      /* border-radius: 50px; */
+      background: #e1fae3;
+      box-shadow:  5px 5px 10px #bfd5c1,
+                  -5px -5px 10px #ffffff;
+      animation: animate 3s ease-in-out forwards;
+  }
+  @keyframes animate {
+      from
+      {
+        width: 0;
+      }
+  }
+}
+
+
 #Achievements li
 {
     list-style: none;
@@ -454,32 +623,177 @@ box-shadow:  7px 7px 14px #d9d9d9,
 
 #Achievements
 {
-    height: 900px;
+  background-color: #dedafc;
+  min-height: 800px;
+}
+
+
+@media  (max-width: 967px) and (min-width: 392px){
+  
+  .bullets
+  {
+      height: 800px;
+      margin-top: 80px;
+  }
+}
+
+@media (min-width: 968px)
+{
+  .bullets
+  {
+      height: 500px;
+      padding: 0px 180px;
+      margin-top: 90px;
+  }
+}
+@media  (max-width: 391px){
+  
+  .bullets
+  {
+      height: 1200px;
+      margin-top: 80px;
+  }
+
+  .bullets ul li{
+    display: flex;
+    margin: 10px;
+    /* padding: 15px; */
+  }
+  
+  .ach-pad
+  {
+    /* padding-left: 10px; */
+    position: relative;
+  }
+}
+
+.bullets ul li{
+  display: flex;
+  margin: 25px;
+}
+
+.ach-pad
+{
+  padding-left: 30px;
+  position: relative;
+}
+
+.ach-pad::after
+{
+      content: ' ';
+      width: 0%;
+      height: 4px;
+      border-radius: 10px;
+      position: absolute;
+      background-color: white;
+
+      background: -webkit-linear-gradient(to right, #b3f0f8, #faf6e1);
+      background: linear-gradient(to right, #b3f0f8, #faf6e1);
+
+
+      /* background: -webkit-linear-gradient(to right, #bbb3f8, #e1fae3); */
+      /* background: linear-gradient(to right, #cbc4fc, #e1fae3); */
+      bottom: 0%;
+      left: 50%;
+      transition: all 500ms ease;
+}
+
+.ach-pad:hover::after
+{
+      left: 10%;
+      width: 80%;      
+}
+
+.ach-pad:hover{
+    color: #35337e;
+}
+
+@media  (max-width: 967px) and (min-width: 392px){
+  
+  .bullets
+  {
+      height: 800px;
+      margin-top: 80px;
+  }
+}
+
+@media (min-width: 968px)
+{
+  .bullets-ea
+  {
+      height: 400px;
+      padding: 0px 250px;
+      margin-top: 90px;
+  }
+}
+@media  (max-width: 391px){
+  
+  .bullets-ea
+  {
+      height: 600px;
+      margin-top: 80px;
+  }
+
+  .bullets-ea ul li{
+    display: flex;
+    margin: 10px;
+    /* padding: 15px; */
+  }
+  
+  .ach-pad
+  {
+    padding-left: 10px;
+    position: relative;
+  }
+}
+
+.bullets-ea ul li{
+  display: flex;
+  margin: 25px;
+}
+
+
+#ExtraActivities li
+{
+    list-style: none;
 }
 
 .foot{
     text-align: center;
     margin: 40px;
 }
+.media
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .footer
 {
     background-color: rgb(222, 228, 223);
     text-align: center;
-    padding: 10px;
+    padding: 10px 14px;
     margin: 5px;
     text-decoration: none;
-    border-radius: 20px;
-    background: #e1fae3;
-    box-shadow: inset 7px 7px 14px #bbd0bc,
-            inset -7px -7px 14px #ffffff;
+    border: 2px solid #dedafc;
+    /* border-radius: 3px; */
     font-size: x-large;
+    border-radius: 12px;
+background: #dedafc;
+box-shadow:  5px 5px 10px #bdb9d6,
+             -5px -5px 10px #fffbff;
 }
+
 .footer:hover
 {
-    border-radius: 20px;
-    background: linear-gradient(145deg, #cbe1cc, #f1fff3);
-    box-shadow:  7px 7px 14px #bbd0bc,
-             -7px -7px 14px #ffffff;
+  /* border: 2px solid #928dc5; */
+  border-radius: 12px;
+background: #dedafc;
+box-shadow: inset 5px 5px 10px #bdb9d6,
+            inset -5px -5px 10px #fffbff;
+
 }
 @media (min-width:300px) and (max-width:768px)
 {
@@ -496,4 +810,12 @@ box-shadow:  7px 7px 14px #d9d9d9,
         padding-left: 120px;
         min-height: 300px;
     }
+}
+
+@media (max-width:319px){
+.profile-image
+{
+    width: 150px;
+    height: 150px;
+}
 }
